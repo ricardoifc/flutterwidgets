@@ -9,68 +9,109 @@ class HomeScreen extends StatelessWidget{
 
     //Botones
     final button1 = new ElevatedButton(
-      child: Text("Ir a la pagina inicio"),
+      child: Text("Listado de productos"),
       style: ElevatedButton.styleFrom(
-          primary: Colors.deepOrange,
+
+          primary: Colors.deepPurple,
           onPrimary: Colors.white,
           elevation: 5,
-          shadowColor: Colors.black
+          shadowColor: Colors.black,
       ),
 
       onPressed: (){
-        Navigator.pushNamed(context, "/productos");
+        Navigator.pushNamed(context, "/listaproductos");
         print("Ir al home");
       },
       onLongPress: (){
         print("Long hello raiced button");
       },
     );
-    final button2 = IconButton(
-      icon: Icon(
-        Icons.add_reaction,
-        size: 20,
-        color: Colors.red,
+
+
+    final button2 = new ElevatedButton(
+      child: Text("Segunda pantalla"),
+      style: ElevatedButton.styleFrom(
+
+        primary: Colors.deepPurple,
+        onPrimary: Colors.white,
+        elevation: 5,
+        shadowColor: Colors.black,
       ),
-      tooltip:'Presioname',
+
       onPressed: (){
-        Navigator.pushNamed(context, "/productos");
-      },
-    );
-
-    final button3 = ElevatedButton.icon(
-      icon: Icon(
-        Icons.favorite,
-        color: Colors.white,
-        size: 20.0,
-      ),
-      label: Text('Boton con iconos'),
-      onPressed: () {
         Navigator.pushNamed(context, "/second");
+        print("Ir al home");
       },
-      style: ElevatedButton.styleFrom(
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(20.0),
-        ),
-      ),
+      onLongPress: (){
+        print("Long hello raiced button");
+      },
     );
 
 
-    final button4 = ElevatedButton.icon(
-      icon: Icon(
-        Icons.favorite,
-        color: Colors.white,
-        size: 20.0,
+
+    final button3 = new ElevatedButton(
+      child: Text("Ir a clientes"),
+      style: ElevatedButton.styleFrom(
+
+        primary: Colors.deepPurple,
+        onPrimary: Colors.white,
+        elevation: 5,
+        shadowColor: Colors.black,
       ),
-      label: Text('Ir a clientes'),
-      onPressed: () {
+
+      onPressed: (){
         Navigator.pushNamed(context, "/clientes");
+        print("Ir al home");
       },
-      style: ElevatedButton.styleFrom(
-        shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(20.0),
-        ),
-      ),
+      onLongPress: (){
+        print("Long hello raiced button");
+      },
     );
+
+
+
+    final button4 = new ElevatedButton(
+      child: Text("Ir a splash"),
+      style: ElevatedButton.styleFrom(
+
+        primary: Colors.deepPurple,
+        onPrimary: Colors.white,
+        elevation: 5,
+        shadowColor: Colors.black,
+      ),
+
+      onPressed: (){
+        Navigator.pushNamed(context, "/splash");
+        print("Ir al home");
+      },
+      onLongPress: (){
+        print("Long hello raiced button");
+      },
+    );
+
+    final button5 = new ElevatedButton(
+      child: Text("Productos"),
+      style: ElevatedButton.styleFrom(
+
+        primary: Colors.deepPurple,
+        onPrimary: Colors.white,
+        elevation: 5,
+        shadowColor: Colors.black,
+      ),
+
+      onPressed: (){
+        Navigator.pushNamed(context, "/pruductos");
+        print("Ir al home");
+      },
+      onLongPress: (){
+        print("Long hello raiced button");
+      },
+    );
+
+
+
+
+
 
     return Scaffold(
         appBar: AppBar(
@@ -128,11 +169,16 @@ class HomeScreen extends StatelessWidget{
             child: Column(
               children: <Widget>[
                 Text('Botonera'),
+                Text('listado'),
                 button1,
+                Text('Ir a segunda pantalla'),
                 button2,
-                Text('Ingresar al formulario'),
+                Text('Listado clientes'),
                 button3,
-                button4
+                Text('ir a splash'),
+                button4,
+                Text('ir a productos(Examen Practico)'),
+                button5
               ],
             ),
           ),
@@ -199,12 +245,12 @@ class ListadoProductos extends StatelessWidget{
       body: ListView(
         children: <Widget>[
           FichaProducto(name: 'Lenovo 3', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://m.media-amazon.com/images/I/51ULYMCNInL._AC_SS450_.jpg'),
-          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://s3.us-east-2.amazonaws.com/ccp-prd-s3-uploads/2020/12/14/3a3f156da611f89b26aefa5c8101d78658fcc9a2.jpeg'),
+          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://m.media-amazon.com/images/I/51ULYMCNInL._AC_SS450_.jpg'),
           FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://images-na.ssl-images-amazon.com/images/I/41S63IQRFXL._SX500_SY500_CR,0,0,500,500_.jpg'),
           FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7_v6jA66Xi_juUlGn-Qz8NSMCJqRhLK01Ng&usqp=CAU'),
-          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://gollo-prod-grupounicomer.netdna-ssl.com/media/catalog/product/cache/7536f51f1dcaf1415428fad840de9edd/1/4/14-dk1022wm_00.jpg'),
-          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://gollo-prod-grupounicomer.netdna-ssl.com/media/catalog/product/cache/7536f51f1dcaf1415428fad840de9edd/1/4/14-dk1022wm_00.jpg'),
-          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://www.profesionalreview.com/wp-content/uploads/2020/02/MSI-Modern-15-Nuevo-portatil-con-GeForce-MX330-e-Intel-Comet-Lake_2.jpg')
+          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://m.media-amazon.com/images/I/51ULYMCNInL._AC_SS450_.jpg'),
+          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://m.media-amazon.com/images/I/51ULYMCNInL._AC_SS450_.jpg'),
+          FichaProducto(name: 'Lenovo 1', description: 'I7 500 SSS, 8va Generacion', price: 1500, imagen: 'https://m.media-amazon.com/images/I/51ULYMCNInL._AC_SS450_.jpg')
         ],
       ),
     );
